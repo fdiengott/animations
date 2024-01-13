@@ -1,0 +1,34 @@
+.fire {
+    margin-inline: auto;
+    position: relative;
+    width: 8rem;
+    height: 20rem;
+    filter: blur(1px) contrast(2);
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    width: 8rem;
+    aspect-ratio: 1/1;
+    opacity: 0;
+    border-radius: 50%;
+    background: radial-gradient(#f50 30%, #f500 70%);
+    animation: rise 1s linear infinite;
+    mix-blend-mode: screen;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10rem) scale(0);
+        opacity: 0;
+    }
+}
