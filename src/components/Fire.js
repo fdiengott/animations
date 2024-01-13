@@ -4,7 +4,7 @@ import React from "react";
 
 const Fire = () => {
     const particleWidth = 8;
-    const numParticles = 40;
+    const numParticles = 50;
     const animationDur = 1.2;
 
     const particles = Array(numParticles)

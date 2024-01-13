@@ -8,6 +8,8 @@
     width: 8rem;
     height: 20rem;
     filter: blur(1px) contrast(2);
+    opacity: 0;
+    animation: fadein 2s forwards;
 }
 
 .particle {
@@ -20,6 +22,15 @@
     background: radial-gradient(#f50 30%, #f500 70%);
     animation: rise var(--animation-duration) linear infinite;
     mix-blend-mode: screen;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes rise {

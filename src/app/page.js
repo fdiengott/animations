@@ -1,13 +1,10 @@
-import Fire2 from "@/components/Fire2";
 import styles from "./page.module.css";
-
-import Fire from "@/components/Fire";
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            {/* <Fire /> */}
-            <Fire2 />
-        </main>
+        <div className={styles.nav}>
+            <a href="/fire1">fire1</a>
+            <a href="/fire2">fire2</a>
+        </div>
     );
 }

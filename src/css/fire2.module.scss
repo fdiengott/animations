@@ -10,6 +10,8 @@
     scale: 0.4 1;
 
     filter: blur(40px) contrast(8);
+    opacity: 0;
+    animation: fadein 2s forwards;
 }
 
 .particle {
@@ -35,5 +37,15 @@
 
     to {
         transform: translateY(calc(var(--fire-height) * -1));
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
