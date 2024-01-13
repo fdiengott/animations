@@ -1,0 +1,39 @@
+.fire {
+    position: relative;
+    width: var(--fire-height);
+    aspect-ratio: 1/1;
+    background-color: #ff9900;
+    box-sizing: border-box;
+    border: 250px solid black;
+    border-bottom-color: transparent;
+    border-radius: 30%;
+    scale: 0.4 1;
+
+    filter: blur(40px) contrast(8);
+}
+
+.particle {
+    position: absolute;
+    width: 5rem;
+    height: var(--particle-height);
+    background: black;
+    top: var(--fire-height);
+    left: var(--particle-left);
+    border-radius: 100%;
+
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: var(--particle-animation-delay);
+    animation-duration: var(--particle-animation-duration);
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(calc(var(--fire-height) * -1));
+    }
+}

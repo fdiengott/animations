@@ -5,6 +5,7 @@ import React from "react";
 const Fire = () => {
     const particleWidth = 8;
     const numParticles = 40;
+    const animationDur = 1.2;
 
     const particles = Array(numParticles)
         .fill()
@@ -14,14 +15,23 @@ const Fire = () => {
                 key={i}
                 style={{
                     left: `calc(${(100 / numParticles) * i}% - ${particleWidth / 2}rem)`,
-                    animationDelay: Math.random() + "s",
+                    animationDelay: Math.random() * animationDur + "s",
                 }}
             />
         ));
 
     return (
-        <div className={styles.fire} style={{ "--particle-width": particleWidth + "rem" }}>
-            {particles}
+        <div className={styles["fire-wrapper"]}>
+            <div className={styles["wood-pile"]}>
+                <div className={styles.wood}></div>
+                <div className={styles.wood}></div>
+            </div>
+            <div
+                className={styles.fire}
+                style={{ "--particle-width": particleWidth + "rem", "--animation-duration": 1.2 + "s" }}
+            >
+                {particles}
+            </div>
         </div>
     );
 };

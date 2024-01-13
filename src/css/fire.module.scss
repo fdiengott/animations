@@ -1,3 +1,7 @@
+.fire-wrapper {
+    position: relative;
+}
+
 .fire {
     margin-inline: auto;
     position: relative;
@@ -14,7 +18,7 @@
     opacity: 0;
     border-radius: 50%;
     background: radial-gradient(#f50 30%, #f500 70%);
-    animation: rise 1s linear infinite;
+    animation: rise var(--animation-duration) linear infinite;
     mix-blend-mode: screen;
 }
 
@@ -31,4 +35,30 @@
         transform: translateY(-10rem) scale(0);
         opacity: 0;
     }
+}
+
+.wood-pile {
+    --log-width: 10rem;
+    position: absolute;
+    width: var(--log-width);
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wood {
+    --log-angle: 20deg;
+    position: absolute;
+    height: 3rem;
+    width: var(--log-width);
+    background: rgb(59, 20, 20);
+    border-radius: 99999px;
+    box-shadow: 0 0 8px #0004;
+}
+
+.wood:nth-child(1) {
+    rotate: var(--log-angle);
+}
+.wood:nth-child(2) {
+    rotate: calc(var(--log-angle) * -1);
 }
